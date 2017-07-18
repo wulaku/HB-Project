@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbOnlinetimeModel */
+/* @var $model app\models\HbOnlinetime */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-onlinetime-model-form">
+<div class="hb-onlinetime-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

@@ -11,10 +11,10 @@ use Yii;
  * @property integer $aid
  * @property integer $idtype
  *
- * @property HbArticleModel $a
- * @property HbTagModel $tag
+ * @property HbArticle $a
+ * @property HbTag $tag
  */
-class HbTagitemModel extends \yii\db\ActiveRecord
+class HbTagitem extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc
@@ -32,8 +32,8 @@ class HbTagitemModel extends \yii\db\ActiveRecord
         return [
             [['tagid'], 'required'],
             [['tagid', 'aid', 'idtype'], 'integer'],
-            [['aid'], 'exist', 'skipOnError' => true, 'targetClass' => HbArticleModel::className(), 'targetAttribute' => ['aid' => 'aid']],
-            [['tagid'], 'exist', 'skipOnError' => true, 'targetClass' => HbTagModel::className(), 'targetAttribute' => ['tagid' => 'tagid']],
+            [['aid'], 'exist', 'skipOnError' => true, 'targetClass' => HbArticle::className(), 'targetAttribute' => ['aid' => 'aid']],
+            [['tagid'], 'exist', 'skipOnError' => true, 'targetClass' => HbTag::className(), 'targetAttribute' => ['tagid' => 'tagid']],
         ];
     }
 
@@ -54,7 +54,7 @@ class HbTagitemModel extends \yii\db\ActiveRecord
      */
     public function getA()
     {
-        return $this->hasOne(HbArticleModel::className(), ['aid' => 'aid']);
+        return $this->hasOne(HbArticle::className(), ['aid' => 'aid']);
     }
 
     /**
@@ -62,6 +62,6 @@ class HbTagitemModel extends \yii\db\ActiveRecord
      */
     public function getTag()
     {
-        return $this->hasOne(HbTagModel::className(), ['tagid' => 'tagid']);
+        return $this->hasOne(HbTag::className(), ['tagid' => 'tagid']);
     }
 }

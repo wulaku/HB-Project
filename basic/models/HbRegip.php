@@ -11,7 +11,7 @@ use Yii;
  * @property string $dateline
  * @property integer $count
  */
-class HbRegipModel extends \yii\db\ActiveRecord
+class HbRegip extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

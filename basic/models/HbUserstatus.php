@@ -12,7 +12,7 @@ use Yii;
  * @property string $lastip
  * @property integer $profileprogress
  */
-class HbUserstatusModel extends \yii\db\ActiveRecord
+class HbUserstatus extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

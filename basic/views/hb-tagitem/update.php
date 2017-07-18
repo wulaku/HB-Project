@@ -3,14 +3,14 @@
 use yii\helpers\Html;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbTagitemModel */
+/* @var $model app\models\HbTagitem */
 
-$this->title = 'Update Hb Tagitem Model: ' . $model->tagid;
-$this->params['breadcrumbs'][] = ['label' => 'Hb Tagitem Models', 'url' => ['index']];
+$this->title = 'Update Hb Tagitem: ' . $model->tagid;
+$this->params['breadcrumbs'][] = ['label' => 'Hb Tagitems', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->tagid, 'url' => ['view', 'id' => $model->tagid]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="hb-tagitem-model-update">
+<div class="hb-tagitem-update">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

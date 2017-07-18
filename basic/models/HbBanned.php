@@ -13,7 +13,7 @@ use Yii;
  * @property string $dateline
  * @property string $expiration
  */
-class HbBannedModel extends \yii\db\ActiveRecord
+class HbBanned extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

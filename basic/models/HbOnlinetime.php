@@ -11,7 +11,7 @@ use Yii;
  * @property integer $thismonth
  * @property integer $total
  */
-class HbOnlinetimeModel extends \yii\db\ActiveRecord
+class HbOnlinetime extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

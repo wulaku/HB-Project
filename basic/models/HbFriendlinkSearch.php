@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbFriendlinkModel;
+use app\models\HbFriendlink;
 
 /**
- * HbFriendlinkSearch represents the model behind the search form about `app\models\HbFriendlinkModel`.
+ * HbFriendlinkSearch represents the model behind the search form about `app\models\HbFriendlink`.
  */
-class HbFriendlinkSearch extends HbFriendlinkModel
+class HbFriendlinkSearch extends HbFriendlink
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbFriendlinkSearch extends HbFriendlinkModel
      */
     public function search($params)
     {
-        $query = HbFriendlinkModel::find();
+        $query = HbFriendlink::find();
 
         // add conditions that should always apply here
 

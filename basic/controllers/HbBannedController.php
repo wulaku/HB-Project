@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbBannedModel;
+use app\models\HbBanned;
 use app\models\HbBannedSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbBannedController implements the CRUD actions for HbBannedModel model.
+ * HbBannedController implements the CRUD actions for HbBanned model.
  */
 class HbBannedController extends Controller
 {
@@ -30,7 +30,7 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Lists all HbBannedModel models.
+     * Lists all HbBanned models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Displays a single HbBannedModel model.
+     * Displays a single HbBanned model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Creates a new HbBannedModel model.
+     * Creates a new HbBanned model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbBannedModel();
+        $model = new HbBanned();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->banid]);
@@ -75,7 +75,7 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Updates an existing HbBannedModel model.
+     * Updates an existing HbBanned model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Deletes an existing HbBannedModel model.
+     * Deletes an existing HbBanned model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbBannedController extends Controller
     }
 
     /**
-     * Finds the HbBannedModel model based on its primary key value.
+     * Finds the HbBanned model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbBannedModel the loaded model
+     * @return HbBanned the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbBannedModel::findOne($id)) !== null) {
+        if (($model = HbBanned::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

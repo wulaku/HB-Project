@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbTagModel;
+use app\models\HbTag;
 use app\models\HbTagSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbTagController implements the CRUD actions for HbTagModel model.
+ * HbTagController implements the CRUD actions for HbTag model.
  */
 class HbTagController extends Controller
 {
@@ -30,7 +30,7 @@ class HbTagController extends Controller
     }
 
     /**
-     * Lists all HbTagModel models.
+     * Lists all HbTag models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbTagController extends Controller
     }
 
     /**
-     * Displays a single HbTagModel model.
+     * Displays a single HbTag model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbTagController extends Controller
     }
 
     /**
-     * Creates a new HbTagModel model.
+     * Creates a new HbTag model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbTagModel();
+        $model = new HbTag();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->tagid]);
@@ -75,7 +75,7 @@ class HbTagController extends Controller
     }
 
     /**
-     * Updates an existing HbTagModel model.
+     * Updates an existing HbTag model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbTagController extends Controller
     }
 
     /**
-     * Deletes an existing HbTagModel model.
+     * Deletes an existing HbTag model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbTagController extends Controller
     }
 
     /**
-     * Finds the HbTagModel model based on its primary key value.
+     * Finds the HbTag model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbTagModel the loaded model
+     * @return HbTag the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbTagModel::findOne($id)) !== null) {
+        if (($model = HbTag::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

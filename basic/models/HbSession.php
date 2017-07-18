@@ -12,7 +12,7 @@ use Yii;
  * @property string $dateline
  * @property integer $errorcount
  */
-class HbSessionModel extends \yii\db\ActiveRecord
+class HbSession extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

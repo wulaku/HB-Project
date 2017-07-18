@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbBannedModel;
+use app\models\HbBanned;
 
 /**
- * HbBannedSearch represents the model behind the search form about `app\models\HbBannedModel`.
+ * HbBannedSearch represents the model behind the search form about `app\models\HbBanned`.
  */
-class HbBannedSearch extends HbBannedModel
+class HbBannedSearch extends HbBanned
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbBannedSearch extends HbBannedModel
      */
     public function search($params)
     {
-        $query = HbBannedModel::find();
+        $query = HbBanned::find();
 
         // add conditions that should always apply here
 

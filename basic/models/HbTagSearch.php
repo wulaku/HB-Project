@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbTagModel;
+use app\models\HbTag;
 
 /**
- * HbTagSearch represents the model behind the search form about `app\models\HbTagModel`.
+ * HbTagSearch represents the model behind the search form about `app\models\HbTag`.
  */
-class HbTagSearch extends HbTagModel
+class HbTagSearch extends HbTag
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbTagSearch extends HbTagModel
      */
     public function search($params)
     {
-        $query = HbTagModel::find();
+        $query = HbTag::find();
 
         // add conditions that should always apply here
 

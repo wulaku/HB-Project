@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-onlinetime-model-search">
+<div class="hb-onlinetime-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

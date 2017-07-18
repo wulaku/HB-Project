@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbTagitemModel;
+use app\models\HbTagitem;
 use app\models\HbTagitemSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbTagitemController implements the CRUD actions for HbTagitemModel model.
+ * HbTagitemController implements the CRUD actions for HbTagitem model.
  */
 class HbTagitemController extends Controller
 {
@@ -30,7 +30,7 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Lists all HbTagitemModel models.
+     * Lists all HbTagitem models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Displays a single HbTagitemModel model.
+     * Displays a single HbTagitem model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Creates a new HbTagitemModel model.
+     * Creates a new HbTagitem model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbTagitemModel();
+        $model = new HbTagitem();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->tagid]);
@@ -75,7 +75,7 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Updates an existing HbTagitemModel model.
+     * Updates an existing HbTagitem model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Deletes an existing HbTagitemModel model.
+     * Deletes an existing HbTagitem model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbTagitemController extends Controller
     }
 
     /**
-     * Finds the HbTagitemModel model based on its primary key value.
+     * Finds the HbTagitem model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbTagitemModel the loaded model
+     * @return HbTagitem the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbTagitemModel::findOne($id)) !== null) {
+        if (($model = HbTagitem::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

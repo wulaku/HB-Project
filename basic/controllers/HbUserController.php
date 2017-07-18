@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbUserModel;
+use app\models\HbUser;
 use app\models\HbUserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbUserController implements the CRUD actions for HbUserModel model.
+ * HbUserController implements the CRUD actions for HbUser model.
  */
 class HbUserController extends Controller
 {
@@ -30,7 +30,7 @@ class HbUserController extends Controller
     }
 
     /**
-     * Lists all HbUserModel models.
+     * Lists all HbUser models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbUserController extends Controller
     }
 
     /**
-     * Displays a single HbUserModel model.
+     * Displays a single HbUser model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbUserController extends Controller
     }
 
     /**
-     * Creates a new HbUserModel model.
+     * Creates a new HbUser model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbUserModel();
+        $model = new HbUser();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->uid]);
@@ -75,7 +75,7 @@ class HbUserController extends Controller
     }
 
     /**
-     * Updates an existing HbUserModel model.
+     * Updates an existing HbUser model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbUserController extends Controller
     }
 
     /**
-     * Deletes an existing HbUserModel model.
+     * Deletes an existing HbUser model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbUserController extends Controller
     }
 
     /**
-     * Finds the HbUserModel model based on its primary key value.
+     * Finds the HbUser model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbUserModel the loaded model
+     * @return HbUser the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbUserModel::findOne($id)) !== null) {
+        if (($model = HbUser::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

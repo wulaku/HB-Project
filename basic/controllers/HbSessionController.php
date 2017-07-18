@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbSessionModel;
+use app\models\HbSession;
 use app\models\HbSessionSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbSessionController implements the CRUD actions for HbSessionModel model.
+ * HbSessionController implements the CRUD actions for HbSession model.
  */
 class HbSessionController extends Controller
 {
@@ -30,7 +30,7 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Lists all HbSessionModel models.
+     * Lists all HbSession models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Displays a single HbSessionModel model.
+     * Displays a single HbSession model.
      * @param integer $uid
      * @param string $ip
      * @return mixed
@@ -58,13 +58,13 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Creates a new HbSessionModel model.
+     * Creates a new HbSession model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbSessionModel();
+        $model = new HbSession();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'uid' => $model->uid, 'ip' => $model->ip]);
@@ -76,7 +76,7 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Updates an existing HbSessionModel model.
+     * Updates an existing HbSession model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $uid
      * @param string $ip
@@ -96,7 +96,7 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Deletes an existing HbSessionModel model.
+     * Deletes an existing HbSession model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $uid
      * @param string $ip
@@ -110,16 +110,16 @@ class HbSessionController extends Controller
     }
 
     /**
-     * Finds the HbSessionModel model based on its primary key value.
+     * Finds the HbSession model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $uid
      * @param string $ip
-     * @return HbSessionModel the loaded model
+     * @return HbSession the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($uid, $ip)
     {
-        if (($model = HbSessionModel::findOne(['uid' => $uid, 'ip' => $ip])) !== null) {
+        if (($model = HbSession::findOne(['uid' => $uid, 'ip' => $ip])) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

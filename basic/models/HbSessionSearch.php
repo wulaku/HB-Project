@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbSessionModel;
+use app\models\HbSession;
 
 /**
- * HbSessionSearch represents the model behind the search form about `app\models\HbSessionModel`.
+ * HbSessionSearch represents the model behind the search form about `app\models\HbSession`.
  */
-class HbSessionSearch extends HbSessionModel
+class HbSessionSearch extends HbSession
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbSessionSearch extends HbSessionModel
      */
     public function search($params)
     {
-        $query = HbSessionModel::find();
+        $query = HbSession::find();
 
         // add conditions that should always apply here
 

@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HbTagSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Hb Tag Models';
+$this->title = 'Hb Tags';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-tag-model-index">
+<div class="hb-tag-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Tag Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Tag', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

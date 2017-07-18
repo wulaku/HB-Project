@@ -14,7 +14,7 @@ use Yii;
  *
  * @property HbTagitemComment[] $hbTagitemComments
  */
-class HbArticleModel extends \yii\db\ActiveRecord
+class HbArticle extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-tagitem-model-search">
+<div class="hb-tagitem-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

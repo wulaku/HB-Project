@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbFriendlinkModel;
+use app\models\HbFriendlink;
 use app\models\HbFriendlinkSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbFriendlinkController implements the CRUD actions for HbFriendlinkModel model.
+ * HbFriendlinkController implements the CRUD actions for HbFriendlink model.
  */
 class HbFriendlinkController extends Controller
 {
@@ -30,7 +30,7 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Lists all HbFriendlinkModel models.
+     * Lists all HbFriendlink models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Displays a single HbFriendlinkModel model.
+     * Displays a single HbFriendlink model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Creates a new HbFriendlinkModel model.
+     * Creates a new HbFriendlink model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbFriendlinkModel();
+        $model = new HbFriendlink();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->linkid]);
@@ -75,7 +75,7 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Updates an existing HbFriendlinkModel model.
+     * Updates an existing HbFriendlink model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Deletes an existing HbFriendlinkModel model.
+     * Deletes an existing HbFriendlink model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbFriendlinkController extends Controller
     }
 
     /**
-     * Finds the HbFriendlinkModel model based on its primary key value.
+     * Finds the HbFriendlink model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbFriendlinkModel the loaded model
+     * @return HbFriendlink the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbFriendlinkModel::findOne($id)) !== null) {
+        if (($model = HbFriendlink::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

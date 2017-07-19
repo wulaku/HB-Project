@@ -10,6 +10,9 @@ $this->title = $model->aid;
 $this->params['breadcrumbs'][] = ['label' => 'Hb Article Models', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+
+
+
 <div class="hb-article-model-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
@@ -34,5 +37,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'pubdate',
         ],
     ]) ?>
+
 
 </div>

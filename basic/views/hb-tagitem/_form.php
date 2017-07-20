@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbTagitemModel */
+/* @var $model app\models\HbTagitem */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-tagitem-model-form">
+<div class="hb-tagitem-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

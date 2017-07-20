@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbArticleModel;
+use app\models\HbArticle;
 use app\models\HbArticleSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbArticleController implements the CRUD actions for HbArticleModel model.
+ * HbArticleController implements the CRUD actions for HbArticle model.
  */
 class HbArticleController extends Controller
 {
@@ -30,7 +30,7 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Lists all HbArticleModel models.
+     * Lists all HbArticle models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Displays a single HbArticleModel model.
+     * Displays a single HbArticle model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Creates a new HbArticleModel model.
+     * Creates a new HbArticle model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbArticleModel();
+        $model = new HbArticle();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->aid]);
@@ -75,7 +75,7 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Updates an existing HbArticleModel model.
+     * Updates an existing HbArticle model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Deletes an existing HbArticleModel model.
+     * Deletes an existing HbArticle model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbArticleController extends Controller
     }
 
     /**
-     * Finds the HbArticleModel model based on its primary key value.
+     * Finds the HbArticle model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbArticleModel the loaded model
+     * @return HbArticle the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbArticleModel::findOne($id)) !== null) {
+        if (($model = HbArticle::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

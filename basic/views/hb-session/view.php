@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbSessionModel */
+/* @var $model app\models\HbSession */
 
 $this->title = $model->uid;
-$this->params['breadcrumbs'][] = ['label' => 'Hb Session Models', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Hb Sessions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-session-model-view">
+<div class="hb-session-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

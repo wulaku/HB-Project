@@ -13,7 +13,7 @@ use Yii;
  *
  * @property HbTagitemComment $hbTagitemComment
  */
-class HbTagModel extends \yii\db\ActiveRecord
+class HbTag extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

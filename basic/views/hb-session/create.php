@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbSessionModel */
+/* @var $model app\models\HbSession */
 
-$this->title = 'Create Hb Session Model';
-$this->params['breadcrumbs'][] = ['label' => 'Hb Session Models', 'url' => ['index']];
+$this->title = 'Create Hb Session';
+$this->params['breadcrumbs'][] = ['label' => 'Hb Sessions', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-session-model-create">
+<div class="hb-session-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

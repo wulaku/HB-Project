@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HbFriendlinkSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Hb Friendlink Models';
+$this->title = 'Hb Friendlinks';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-friendlink-model-index">
+<div class="hb-friendlink-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Friendlink Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Friendlink', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

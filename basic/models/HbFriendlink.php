@@ -15,7 +15,7 @@ use Yii;
  * @property string $logo
  * @property integer $type
  */
-class HbFriendlinkModel extends \yii\db\ActiveRecord
+class HbFriendlink extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbUserstatusModel;
+use app\models\HbUserstatus;
 
 /**
- * HbUserstatusSearch represents the model behind the search form about `app\models\HbUserstatusModel`.
+ * HbUserstatusSearch represents the model behind the search form about `app\models\HbUserstatus`.
  */
-class HbUserstatusSearch extends HbUserstatusModel
+class HbUserstatusSearch extends HbUserstatus
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbUserstatusSearch extends HbUserstatusModel
      */
     public function search($params)
     {
-        $query = HbUserstatusModel::find();
+        $query = HbUserstatus::find();
 
         // add conditions that should always apply here
 

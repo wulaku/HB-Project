@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbFriendlinkModel */
+/* @var $model app\models\HbFriendlink */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Hb Friendlink Models', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Hb Friendlinks', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-friendlink-model-view">
+<div class="hb-friendlink-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

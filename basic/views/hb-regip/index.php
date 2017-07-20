@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HbRegipSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Hb Regip Models';
+$this->title = 'Hb Regips';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-regip-model-index">
+<div class="hb-regip-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Regip Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Regip', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

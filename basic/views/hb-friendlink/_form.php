@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbFriendlinkModel */
+/* @var $model app\models\HbFriendlink */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-friendlink-model-form">
+<div class="hb-friendlink-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

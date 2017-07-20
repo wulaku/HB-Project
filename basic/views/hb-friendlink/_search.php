@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-friendlink-model-search">
+<div class="hb-friendlink-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

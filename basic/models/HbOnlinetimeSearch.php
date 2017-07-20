@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbOnlinetimeModel;
+use app\models\HbOnlinetime;
 
 /**
- * HbOnlinetimeSearch represents the model behind the search form about `app\models\HbOnlinetimeModel`.
+ * HbOnlinetimeSearch represents the model behind the search form about `app\models\HbOnlinetime`.
  */
-class HbOnlinetimeSearch extends HbOnlinetimeModel
+class HbOnlinetimeSearch extends HbOnlinetime
 {
     /**
      * @inheritdoc
@@ -40,7 +40,7 @@ class HbOnlinetimeSearch extends HbOnlinetimeModel
      */
     public function search($params)
     {
-        $query = HbOnlinetimeModel::find();
+        $query = HbOnlinetime::find();
 
         // add conditions that should always apply here
 

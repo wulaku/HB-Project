@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-regip-model-search">
+<div class="hb-regip-search">
 
     <?php $form = ActiveForm::begin([
         'action' => ['index'],

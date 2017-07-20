@@ -5,12 +5,12 @@ namespace app\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\HbRegipModel;
+use app\models\HbRegip;
 
 /**
- * HbRegipSearch represents the model behind the search form about `app\models\HbRegipModel`.
+ * HbRegipSearch represents the model behind the search form about `app\models\HbRegip`.
  */
-class HbRegipSearch extends HbRegipModel
+class HbRegipSearch extends HbRegip
 {
     /**
      * @inheritdoc
@@ -41,7 +41,7 @@ class HbRegipSearch extends HbRegipModel
      */
     public function search($params)
     {
-        $query = HbRegipModel::find();
+        $query = HbRegip::find();
 
         // add conditions that should always apply here
 

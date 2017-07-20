@@ -17,7 +17,7 @@ use Yii;
  * @property integer $credits
  * @property string $profile
  */
-class HbUserModel extends \yii\db\ActiveRecord
+class HbUser extends \yii\db\ActiveRecord
 {
     /**
      * @inheritdoc

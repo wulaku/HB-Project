@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbUserstatusModel;
+use app\models\HbUserstatus;
 use app\models\HbUserstatusSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbUserstatusController implements the CRUD actions for HbUserstatusModel model.
+ * HbUserstatusController implements the CRUD actions for HbUserstatus model.
  */
 class HbUserstatusController extends Controller
 {
@@ -30,7 +30,7 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Lists all HbUserstatusModel models.
+     * Lists all HbUserstatus models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Displays a single HbUserstatusModel model.
+     * Displays a single HbUserstatus model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Creates a new HbUserstatusModel model.
+     * Creates a new HbUserstatus model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbUserstatusModel();
+        $model = new HbUserstatus();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->uid]);
@@ -75,7 +75,7 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Updates an existing HbUserstatusModel model.
+     * Updates an existing HbUserstatus model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Deletes an existing HbUserstatusModel model.
+     * Deletes an existing HbUserstatus model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbUserstatusController extends Controller
     }
 
     /**
-     * Finds the HbUserstatusModel model based on its primary key value.
+     * Finds the HbUserstatus model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbUserstatusModel the loaded model
+     * @return HbUserstatus the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbUserstatusModel::findOne($id)) !== null) {
+        if (($model = HbUserstatus::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

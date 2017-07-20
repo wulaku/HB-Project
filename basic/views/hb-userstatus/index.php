@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HbUserstatusSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Hb Userstatus Models';
+$this->title = 'Hb Userstatuses';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-userstatus-model-index">
+<div class="hb-userstatus-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Userstatus Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Userstatus', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

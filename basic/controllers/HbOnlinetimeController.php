@@ -3,14 +3,14 @@
 namespace app\controllers;
 
 use Yii;
-use app\models\HbOnlinetimeModel;
+use app\models\HbOnlinetime;
 use app\models\HbOnlinetimeSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
- * HbOnlinetimeController implements the CRUD actions for HbOnlinetimeModel model.
+ * HbOnlinetimeController implements the CRUD actions for HbOnlinetime model.
  */
 class HbOnlinetimeController extends Controller
 {
@@ -30,7 +30,7 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Lists all HbOnlinetimeModel models.
+     * Lists all HbOnlinetime models.
      * @return mixed
      */
     public function actionIndex()
@@ -45,7 +45,7 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Displays a single HbOnlinetimeModel model.
+     * Displays a single HbOnlinetime model.
      * @param integer $id
      * @return mixed
      */
@@ -57,13 +57,13 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Creates a new HbOnlinetimeModel model.
+     * Creates a new HbOnlinetime model.
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
     public function actionCreate()
     {
-        $model = new HbOnlinetimeModel();
+        $model = new HbOnlinetime();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->uid]);
@@ -75,7 +75,7 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Updates an existing HbOnlinetimeModel model.
+     * Updates an existing HbOnlinetime model.
      * If update is successful, the browser will be redirected to the 'view' page.
      * @param integer $id
      * @return mixed
@@ -94,7 +94,7 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Deletes an existing HbOnlinetimeModel model.
+     * Deletes an existing HbOnlinetime model.
      * If deletion is successful, the browser will be redirected to the 'index' page.
      * @param integer $id
      * @return mixed
@@ -107,15 +107,15 @@ class HbOnlinetimeController extends Controller
     }
 
     /**
-     * Finds the HbOnlinetimeModel model based on its primary key value.
+     * Finds the HbOnlinetime model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
      * @param integer $id
-     * @return HbOnlinetimeModel the loaded model
+     * @return HbOnlinetime the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
     protected function findModel($id)
     {
-        if (($model = HbOnlinetimeModel::findOne($id)) !== null) {
+        if (($model = HbOnlinetime::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');

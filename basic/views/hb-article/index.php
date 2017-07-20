@@ -30,6 +30,7 @@
 
 
 
+
 <!--[if lt IE 9]>
 <link rel='stylesheet' id='twentyseventeen-ie8-css'  href='http://localhost:8080/wordpress/wp-content/themes/twentyseventeen/assets/css/ie8.css?ver=1.0' type='text/css' media='all' />
 <![endif]-->
@@ -97,7 +98,7 @@
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Article Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Article', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     
 

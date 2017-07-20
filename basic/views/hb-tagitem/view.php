@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbTagitemModel */
+/* @var $model app\models\HbTagitem */
 
 $this->title = $model->tagid;
-$this->params['breadcrumbs'][] = ['label' => 'Hb Tagitem Models', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Hb Tagitems', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-tagitem-model-view">
+<div class="hb-tagitem-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -4,11 +4,11 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbBannedModel */
+/* @var $model app\models\HbBanned */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="hb-banned-model-form">
+<div class="hb-banned-form">
 
     <?php $form = ActiveForm::begin(); ?>
 

@@ -7,16 +7,16 @@ use yii\grid\GridView;
 /* @var $searchModel app\models\HbSessionSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Hb Session Models';
+$this->title = 'Hb Sessions';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-session-model-index">
+<div class="hb-session-index">
 
     <h1><?= Html::encode($this->title) ?></h1>
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <p>
-        <?= Html::a('Create Hb Session Model', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Create Hb Session', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
     <?= GridView::widget([
         'dataProvider' => $dataProvider,

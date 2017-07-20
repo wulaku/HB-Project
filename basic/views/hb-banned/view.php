@@ -4,13 +4,13 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbBannedModel */
+/* @var $model app\models\HbBanned */
 
 $this->title = $model->banid;
-$this->params['breadcrumbs'][] = ['label' => 'Hb Banned Models', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Hb Banneds', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-banned-model-view">
+<div class="hb-banned-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

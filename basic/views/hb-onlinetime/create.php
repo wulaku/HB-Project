@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model app\models\HbOnlinetimeModel */
+/* @var $model app\models\HbOnlinetime */
 
-$this->title = 'Create Hb Onlinetime Model';
-$this->params['breadcrumbs'][] = ['label' => 'Hb Onlinetime Models', 'url' => ['index']];
+$this->title = 'Create Hb Onlinetime';
+$this->params['breadcrumbs'][] = ['label' => 'Hb Onlinetimes', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="hb-onlinetime-model-create">
+<div class="hb-onlinetime-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

@@ -3,13 +3,18 @@
 namespace app\controllers;
 
 use Yii;
+use app\models\HbArticleModel;
+use app\models\HbArticleSearch;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-use app\models\EntryForm;
+use app\models\SignupForm;
+use yii\web\NotFoundHttpException;
+
+
 
 class SiteController extends Controller
 {
@@ -60,9 +65,40 @@ class SiteController extends Controller
      *
      * @return string
      */
+    
+
+ public function actionSignup()
+    {
+        $model = new SignupForm();
+        if ($model->load(Yii::$app->request->post())) {
+            /**var_dump(Yii::$app->request->post()); //页面输出调试
+            return; //防止跳回主页*/
+            if ($user = $model->signup()) {//注册操作  
+                if (Yii::$app->getUser()->login($user)) {   //如果注册成功，登录操作
+                    return $this->goHome();  //返回index界面 
+                }
+            }
+        }
+
+        return $this->render('signup', [    //如果出错返回注册界面
+            'model' => $model,
+        ]);
+    }
+
+
     public function actionIndex()
     {
-        return $this->render('index');
+        $searchModel = new HbArticleSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+     public function actionIndexe()
+    {
+        return $this->render('indexe');
     }
 
     /**
@@ -78,7 +114,8 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+
+            return $this->render('admin3');
         }
         return $this->render('login', [
             'model' => $model,
